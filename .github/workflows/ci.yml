@@ -1,28 +1,25 @@
-name: CI action
+name: CI
 
 on:
   push:
-    branches: [main]
-  pull_request:
-    branches: [main]
+    branches:
+      - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    
-    strategy:
-      matrix:
-        node-version: [12.x]
-        
+
     steps:
-      - name: go to react app
-        run: cd react-typescript-app
-        
-      - name: Install dependencies 
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+
+      - name: Install dependencies
         run: npm install
-      
-      - name: Run the tests 
+
+      - name: Run tests
         run: npm test
-      
-      - name: Build
-        run: npm run build
