@@ -44,7 +44,7 @@ __decorate([
     __metadata("design:returntype", Array)
 ], AppController.prototype, "getArticles", null);
 __decorate([
-    (0, common_1.Get)('/api/articles:id'),
+    (0, common_1.Get)('/api/articles/:id'),
     __param(0, (0, common_1.Param)('id')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
