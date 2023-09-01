@@ -24,5 +24,6 @@ jobs:
       - name: Run cd and the tests
         run: |
           cd react-typescript-app
+          npm install
           npm test
 
