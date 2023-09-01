@@ -17,3 +17,17 @@ import React from 'react';
       ReactDOM.render(<App />, div); 
       ReactDOM.unmountComponentAtNode(div); 
     }); 
+
+    describe('Addition', () => { 
+      it('knows that 2 and 2 make 4', () => { 
+        expect(2 + 2).toBe(4); 
+      }); 
+    }); 
+
+    describe('Addition Error', () => { 
+      it('knows that 2 and 2 make 4', () => { 
+        expect(2 + 2).toBe(5); 
+      }); 
+    }); 
+
+
