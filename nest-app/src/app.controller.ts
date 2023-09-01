@@ -20,10 +20,10 @@ export class AppController {
     getArticles(): any[] {
       return ARTICLES;
     }
-    
+
   //create an end point with parameter
   @Get('/api/articles:id')
-    getArticlesID(@Param('id') id: string): any[] {
-      return ARTICLES.find((n)=> n._id === id )
+    getArticlesById(@Param('id') id: string): any[] {
+      return ARTICLES.find((n)=> n._id === id );
     }
 }

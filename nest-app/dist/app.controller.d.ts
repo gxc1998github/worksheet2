@@ -3,4 +3,6 @@ export declare class AppController {
     private readonly appService;
     constructor(appService: AppService);
     getHello(): string;
+    getArticles(): any[];
+    getArticlesID(id: string): any[];
 }
