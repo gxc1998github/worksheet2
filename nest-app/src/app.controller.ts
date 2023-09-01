@@ -1,5 +1,10 @@
-import { Controller, Get } from '@nestjs/common';
+// controller, the waitress for clients
+
+import { Controller, Get, Param } from '@nestjs/common';
 import { AppService } from './app.service';
+
+// mock up database
+import { ARTICLES } from './dummydata/articles';
 
 @Controller()
 export class AppController {
@@ -9,4 +14,16 @@ export class AppController {
   getHello(): string {
     return this.appService.getHello();
   }
+
+  //create an end point
+  @Get('/api/articles')
+    getArticles(): any[] {
+      return ARTICLES;
+    }
+    
+  //create an end point with parameter
+  @Get('/api/articles:id')
+    getArticlesID(@Param('id') id: string): any[] {
+      return ARTICLES.find((n)=> n._id === id )
+    }
 }
