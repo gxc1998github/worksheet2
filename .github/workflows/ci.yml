@@ -15,7 +15,9 @@ jobs:
         node-version: [12.x]
         
     steps:
-          
+      - name: go to react app
+        run: cd react-typescript-app
+        
       - name: Install dependencies 
         run: npm install
       
