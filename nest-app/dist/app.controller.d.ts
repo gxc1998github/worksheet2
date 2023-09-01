@@ -4,5 +4,5 @@ export declare class AppController {
     constructor(appService: AppService);
     getHello(): string;
     getArticles(): any[];
-    getArticlesID(id: string): any[];
+    getArticlesById(id: string): any[];
 }

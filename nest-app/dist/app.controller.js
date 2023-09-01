@@ -26,7 +26,7 @@ let AppController = class AppController {
     getArticles() {
         return articles_1.ARTICLES;
     }
-    getArticlesID(id) {
+    getArticlesById(id) {
         return articles_1.ARTICLES.find((n) => n._id === id);
     }
 };
@@ -49,7 +49,7 @@ __decorate([
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", Array)
-], AppController.prototype, "getArticlesID", null);
+], AppController.prototype, "getArticlesById", null);
 exports.AppController = AppController = __decorate([
     (0, common_1.Controller)(),
     __metadata("design:paramtypes", [app_service_1.AppService])
