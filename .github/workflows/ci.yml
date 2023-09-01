@@ -3,7 +3,7 @@ name: github action
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build:
@@ -17,6 +17,9 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '18' # You can change this to your desired Node.js version
+
+      - name: Go to react app directory
+        run: cd react-typescript-app
 
       - name: Install packages
         run: npm install
