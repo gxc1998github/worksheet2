@@ -18,11 +18,11 @@ jobs:
         with:
           node-version: '18' # You can change this to your desired Node.js version
 
-      - name: Go to react app directory
-        run: cd react-typescript-app
-
       - name: Install packages
         run: npm install
 
-      - name: Run the tests
-        run: npm test
+      - name: Run cd and the tests
+        run: 
+          cd react-typescript-app
+          npm test
+
